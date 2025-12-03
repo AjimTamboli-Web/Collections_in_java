@@ -12,12 +12,14 @@ public class E_ArrayList {
 		list.add(12);
 		list.add(876);
 		list.add(65);
+		list.add(65);
 		list.add(2234);
 		list.add(223);
+		
 		System.out.println(list);
-		System.out.println(list.size());  // 7
+		System.out.println(list.size());  // 8
 		System.out.println(list.contains(65)); // true
-		System.out.println(list.indexOf(2234)); // 5 
+		System.out.println(list.indexOf(2234)); // 6
 		System.out.println(list.lastIndexOf(876)); // 3
 		System.out.println(list.remove(2));     // delete 12
 		System.out.println(list); // updated list
