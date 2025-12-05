@@ -3,8 +3,21 @@ package collections;
 public class C_generics {
 
 	public static void main(String[] args) {
+
+/*
+ * ⏺️ Generics => Generics means parameterized types. They allows us to write code that works with different
+                    data types using a single class, interface or method.    ✔ Compile-time error checking
+ *           Generics means writing code that works for any data type (like int, String, Double) without 
+                  rewriting the same code again and again.  ✔ Type-safe code  ✔ Reusable code
+ *  ⚠️ Why Generic? -> Without generics, collections store Object → risk of ClassCastException.
+ *  
+ *                    With Generics, you can specify the type the collection will hold like ArrayList<String>. 
+ *                    Now, Java knows what to expect and it checks at compile time, not at runtime. 
+ * ⭕ Types of Java Generic  ->  1. Generic Class     2. Generic Method                             
+ */
 		
-		Itype<Integer> mak = new Maker();
+		
+		Itype<Integer> mak = new Maker();      // generic class
 		
 		mak.show(23);
 		
@@ -23,6 +36,9 @@ public class C_generics {
 	    Itype2<Integer,String> mak5 = new Conver2();
 	    System.out.println(mak5.see("Jannifer Lawrence"));
 	   
+	    MethGen.methGen(23);      					 // generic methods
+	    MethGen.methGen("Hellow");  
+	    MethGen.methGen(23.45);
 	}
 
 }
@@ -49,7 +65,7 @@ class Maker1 implements Itype<String>{
 	}
 }
 
-class Maker2<T> implements Itype<T>{
+class Maker2<T> implements Itype<T>{         // generic class
 	
 	public void show(Integer i) {
 		System.out.println(i);
@@ -93,3 +109,13 @@ class Conver2 implements Itype2 <Integer,String>{
 	}
 }
 
+
+class MethGen{              // Method generic
+	MethGen(){
+		System.out.println("This is class to have method is generic.");
+	}
+	
+	public static <T> void methGen(T elements) {
+		System.out.println(elements.getClass().getName() + " = " + elements);
+	}
+}
