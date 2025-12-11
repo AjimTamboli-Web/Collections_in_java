@@ -24,6 +24,9 @@ public class F_LinkedList {
 		
 		list.add(34);   list.add(45);   list.add(12);    list.add(76);   list.add(65);   list.add(34);    list.add(90);
 		
+		System.out.println(list.remove(2));  // remove using index
+		System.out.println(list.remove(Integer.valueOf(12))); // removing using object
+		
 		System.out.println(list);
 		
 		List<String> l = new LinkedList<String>();
