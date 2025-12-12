@@ -27,6 +27,8 @@ public class F_LinkedList2 {
 		
 		System.out.println(co);  // updated list
 		
+		
+		
 	}
 
 }
