@@ -22,6 +22,8 @@ public class H_Vector_list {
        
  *   Java Vector contains many legacy methods that are not the part of a collections framework.
  *   
+ *   ✔ Load Factor => Vector also does NOT have a load factor.  ✔ Node Factor => Vector does not use nodes → uses array internally.
+ *   ✔ Growth Factor (Most Important) => Vector increases capacity by 2× (double) when full.  ⭕ new capacity = old capacity * 2
  */
 		
 		Vector<String> v = new Vector<String>();
