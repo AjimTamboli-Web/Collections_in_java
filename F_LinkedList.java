@@ -9,7 +9,8 @@ public class F_LinkedList {
 		
 /*
  * ⏺️ LinkedList => It implements a doubly-linked list data structure where elements are not stored in contiguous memory.
- *                  LinkedList is a linear data structure that stores elements in nodes.  
+ *                  LinkedList is a linear data structure that stores elements in nodes. 
+ *              ⏺️  LinkedList performs better for insert/delete but worse for search 
  *  ⭕ each node contains: ✔️ 1️ Data  ✔️ 2️ Address of next node → next   ✔️ 3️ Address of previous node → prev (in doubly linked list)
  * ⭕ Dynamic Size: LinkedList grows or shrinks dynamically at runtime.
  * ⭕ Maintains Insertion Order: Elements are stored in the order they are added.
@@ -19,6 +20,9 @@ public class F_LinkedList {
  * 		+---------+---------+---------+
         |  prev   |  data   |  next   |        Ex:  null ← [10] ⇔ [20] ⇔ [30] → null
         +---------+---------+---------+
+ * ✔ LinkedList is made of Nodes.  Each node has 3 fields: prev pointer , data , next pointer. This is called a doubly-linked node.
+ * ✔️ ✔ No growth factor (because it uses nodes, not arrays)
+ * ✔ Load Factor => LinkedList does NOT have load factor (no hashing).  ✔ Node Factor (Very Important for LinkedList)
  */
 		List<Integer> list = new LinkedList<Integer>();
 		
