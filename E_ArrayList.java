@@ -25,7 +25,9 @@ public class E_ArrayList {
           	                          ❌ Inefficient for large data insertions    ❌ Shifting of elements required on removal    
  *  🚀 Complexity of Java ArrayList =>   Access: O(1)	       Insert end: O(1) amortized
 										 Insert middle: O(n)   Remove middle: O(n)
-										 Search: O(n)          Space: O(n)     	                                                         
+										 Search: O(n)          Space: O(n)     	 
+ *  ✔ Load Factor => ArrayList does NOT have load factor.	✔ Node Factor => ArrayList does not use nodes — it uses a resizable array.
+ *  ✔ Growth Factor (Capacity Increase Factor) => ArrayList grows by 1.5 times.  new capacity = old capacity + (old capacity / 2)
  */
 		
 		
