@@ -1,4 +1,5 @@
 package collections;
+
 import java.util.*;
 
 public class I_Stack_Vector {
@@ -33,8 +34,15 @@ public class I_Stack_Vector {
 		
 		System.out.println(st);
 		System.out.println("peek: " + st.peek()); // show the top element at in stack
+
+		System.out.println("First Element: " + st.firstElement());
+		System.out.println("Last Element: " + st.lastElement());
 		
-		System.out.println(st.search(12));
+//		System.out.println("0 index : " + st.get(0));  this will get confuse that why not use in stack it gives random access
+//		System.out.println("2 index : " + st.get(2));   stack should maintain LIFO order.
+		
+//      Searches for an element from the top of the stack and returns 1-based position.		
+		System.out.println(st.search(12)); // it follow opposite of list order index base, stack use head to tail to search
 		System.out.println(st.empty());   // false
 		
 		System.out.println(st.capacity());
@@ -44,8 +52,16 @@ public class I_Stack_Vector {
 			st.pop();
 		}
 		
-		System.out.println(st); // stack is empty
+		System.out.println(st); // stack is empty []
 		System.out.println(st.empty());  // true
+		
+		System.out.println(st.size()); // 0
+		st.add(78);
+		st.add(65);
+		System.out.println(st.size()); // 2
+		System.out.println(st.lastElement()); // 65
+		System.out.println(st.firstElement()); // 78
+		
 	}
 
 }
