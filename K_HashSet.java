@@ -100,7 +100,7 @@ public class K_HashSet {
 		System.out.println(haha.hashCode()); 
 //		System.out.println(Integer.hashCode(9));
 		
-		
+		//  HashSet(int initialCapacity, float loadFactor)
 		HashSet<String> hash = new HashSet<>(32,0.8f);  // capacity: 32 Load Factor: 0.8
 		                                                // Threshold = 32 × 0.8 = 25 
 		hash.add("Custom");
