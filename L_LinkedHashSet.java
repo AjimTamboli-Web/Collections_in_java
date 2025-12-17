@@ -37,7 +37,15 @@ public class L_LinkedHashSet {
 		lhs.add(null);    // ❌ ignored
 	// insertion order maintain	
 		System.out.println(lhs);
-	
+	    lhs.addFirst("Tom");  // because it has node head and tail it all operations on first and last node.
+	    lhs.addLast("Robert");
+	    System.out.println("Updated set: " + lhs);
+	    
+	    for(String s:lhs) {
+	    	System.out.println(s);
+	    }
+	    
+		
 /*
  * 	From Java 10, you can use the var keyword to declare a LinkedHashSet variable without writing the type twice.
   				 The compiler figures out the type from the value you assign.
@@ -53,6 +61,14 @@ public class L_LinkedHashSet {
 		
 		List<Integer> lis = new ArrayList<>(sor);
 		System.out.println("Array List: " + lis);
+		
+		
+// retaining all		
+		LinkedHashSet<Integer> setli = new LinkedHashSet<>();
+		setli.add(32);  setli.add(78); setli.add(20);  setli.add(10);
+		System.out.println("Before retaining: " + setli);
+		setli.retainAll(list);
+		System.out.println("After retaining with linked hash set list: " + setli);
 	}
 
 }
