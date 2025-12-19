@@ -103,7 +103,7 @@ class Custom_Class_For_Contract{
 	
 	
 	public int hashCode() {
-		System.out.println("hashcode Checking....");
+		System.out.println("Set calling HashCode .... before adding");
 		return 10000 + this.id + this.name.length();
 	}
 	
@@ -111,7 +111,7 @@ class Custom_Class_For_Contract{
 		
 		Custom_Class_For_Contract cont2 = (Custom_Class_For_Contract)obj;
 		
-		System.out.println("Checking .equals after hashCode is same.");
+		System.out.println("Calling .equals after hashCode is same to determine the uniqueness...");
 		return this.id == cont2.id && this.name.equals(cont2.name);
 	}
 	
