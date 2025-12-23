@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class N_Queue {
+public class N_I_Queue {
 
 	public static void main(String[] args) {
 
