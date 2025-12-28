@@ -22,6 +22,17 @@ public class P_Map {
  * A Map is useful if you have to search, update or delete elements on the basis of a key.
  * A Map can't be traversed, so you need to convert it into Set using keySet() or entrySet() method.
  *   
+ *    							Map (interface)
+				                    |
+				    ---------------------------------------
+				    |               |                     |
+				SortedMap        ConcurrentMap        (Direct Implementations)
+				    |               |                     |
+				NavigableMap   ConcurrentHashMap     HashMap
+				    |                                   |
+				 TreeMap                          LinkedHashMap
+				                                   |
+				                               Hashtable (legacy)
  * 
  */
 		
