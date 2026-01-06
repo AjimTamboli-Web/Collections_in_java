@@ -1,8 +1,7 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+
 
 public class D_Root_Iterable {
 
@@ -20,7 +19,8 @@ public class D_Root_Iterable {
           It throws NoSuchElementException if no more element is present.
  * ⏺️ remove():Removes the last element returned by next().This method can be called only once per call to next().
  * 
- * 
+ * Iterator modify the under collection in original list.
+ * Enumeration does not modify the original list (use in vector, hashTable) for iterating.
  */
 		
 		
@@ -82,6 +82,34 @@ public class D_Root_Iterable {
 	
 		// it does not give you error because it update modCount & expectedModCount, both remain equal
 		// so no exception
+		
+// ***********************************************************************************************
+		
+		Set<Integer> arr = new HashSet<>();
+		arr.add(54);
+		arr.add(98);
+		arr.add(15);
+		arr.add(89);
+		arr.add(82);
+		arr.add(74);
+		arr.add(19);
+		arr.add(72);
+		
+		System.out.println(arr);
+		
+		Iterator<Integer> itset= arr.iterator();
+	
+		while(itset.hasNext()) { // only one next() allowed
+//			System.out.println(itset.next());
+			int s = (Integer)itset.next();
+			if(s == 74) {
+				itset.remove(); 
+			} // modification is possible
+		}
+		
+		System.out.println(arr);
+		
+		
 	}
 
 }
